@@ -1,0 +1,39 @@
+<title>Add or Edit product</title>
+<h3>{{viewTitle}}</h3>
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+  <label for="usr">Employee ID</label>
+  <input type="text" class="form-control" name="id" value="{{employee.id}}" placeholder="Employee ID">
+<div class="text-danger">
+            {{employee.idError}}
+        </div>
+</div>
+    <div class="form-group">
+  <label for="usr">Employee Name</label>
+  <input type="text" class="form-control" name="employeeName" value="{{employee.employeeName}}" placeholder="Employee Name">
+<div class="text-danger">
+            {{employee.employeeNameError}}
+        </div>
+</div>
+<div class="form-group">
+  <label for="usr">City</label>
+  <input type="text" class="form-control" name="employeeCity" value="{{employee.employeeCity}}" placeholder="City">
+<div class="text-danger">
+            {{employee.employeeCityError}}
+        </div>
+</div>
+<div class="form-group">
+  <label for="usr">Mobile</label>
+  <input type="text" class="form-control" name="mobile" value="{{employee.mobile}}" placeholder="Mobile">
+<div class="text-danger">
+            {{employee.amountError}}
+        </div>
+</div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>&nbsp;Submit</button>
+        <a href="/employee/list" class="btn btn-success">
+            <i class="fa fa-list-alt"></i>&nbsp;View All
+        </a>
+    </div>
+</form>

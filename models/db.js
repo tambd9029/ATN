@@ -8,3 +8,4 @@ mongoose.connect(url,{useNewUrlParser:true},(err) => {
 })
 
 require('./product.model');
+require('./employee.model');

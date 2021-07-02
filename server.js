@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const expressHandlebars = require('express-handlebars');
 const productController = require('./controller/productController');
+const employeeController = require('./controller/employeeController');
 
 var app = express();
 
@@ -34,3 +35,4 @@ app.listen(PORT, () => {
 });
 
 app.use('/product', productController);
+app.use('/employee', employeeController);
