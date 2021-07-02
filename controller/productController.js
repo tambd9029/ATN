@@ -20,6 +20,7 @@ router.post("/", (req, res) => {
 
 function insertRecord(req, res) {
     var product = new Product();
+    product.id = req.body.id;
     product.fullName = req.body.fullName;
     product.category = req.body.category;
     product.amount = req.body.amount;
