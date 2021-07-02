@@ -2,30 +2,26 @@
 <form action="/product" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{product._id}}">
     <div class="form-group">
-        <label>Product Name</label>
-        <input type="text" class="form-control" name="fullName" value="{{product.fullName}}" placeholder="Full Name">
-        <div class="text-danger">
+  <label for="usr">Product name</label>
+  <input type="text" class="form-control" name="fullName" value="{{product.fullName}}" placeholder="Full name">
+<div class="text-danger">
             {{product.fullNameError}}
         </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group md-6">
-            <label>Category</label>
-            <input type="text" name="category" placeholder="Category" value="{{product.category}}" class="form-control">
-            <div class="text-danger">
+</div>
+<div class="form-group">
+  <label for="usr">Category</label>
+  <input type="text" class="form-control" name="category" value="{{product.category}}" placeholder="Category">
+<div class="text-danger">
             {{product.categoryError}}
-</div>
         </div>
-        <div class="form-group md-6">
-            <label>Ammount</label>
-            <input type="text" name="ammount" placeholder="Ammount" value="{{product.ammount}}" class="form-control">
-                        <div class="text-danger">
-
-            {{product.ammountError}}
 </div>
+<div class="form-group">
+  <label for="usr">Amount</label>
+  <input type="text" class="form-control" name="amount" value="{{product.amount}}" placeholder="Amount">
+<div class="text-danger">
+            {{product.amountError}}
         </div>
-    </div>
-
+</div>
     <div class="form-group">
         <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
         <a href="/product/list" class="btn btn-danger">

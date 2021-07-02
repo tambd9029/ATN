@@ -22,7 +22,7 @@ function insertRecord(req, res) {
     var product = new Product();
     product.fullName = req.body.fullName;
     product.category = req.body.category;
-    product.ammount = req.body.ammount;
+    product.amount = req.body.amount;
 
     product.save((err, doc) => {
         if (!err) {
@@ -60,6 +60,7 @@ function updateRecord(req, res) {
         }
     })
 }
+
 
 router.get('/list', (req, res) => {
     Product.find((err, docs) => {
@@ -102,8 +103,8 @@ function handleValidationError(err, body) {
                 case 'category':
                     body['categoryError'] = err.errors[field].message;
                     break;
-                    case 'ammount':
-                body['ammountError'] = err.errors[field].message;
+                    case 'amount':
+                body['amountError'] = err.errors[field].message;
                 break;
 
             default:

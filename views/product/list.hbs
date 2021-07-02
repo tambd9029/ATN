@@ -10,7 +10,8 @@
             <th>Full Name</th>
             <th>Category</th>
             <th>Ammount</th>
-            <th></th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -18,14 +19,16 @@
         <tr>
             <td>{{this.fullName}}</td>
             <td>{{this.category}}</td>
-            <td>{{this.ammount}}</td>
+            <td>{{this.amount}}</td>
             <td>
                 <a href="/product/{{this._id}}">
-                    Edit
+<i class="fas fa-edit"></i>
                 </a>
+                </td>
+                <td>
                 <a href="/product/delete/{{this._id}}"
                     onclick="return confirm('Are you sure to delete this record?');">
-Delete
+<i class="fas fa-trash"></i>
                 </a>
             </td>
         </tr>
