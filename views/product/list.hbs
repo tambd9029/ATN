@@ -10,7 +10,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Product OD</th>
+          <th>Product ID</th>
           <th>Product Name</th>
             <th>Product Type</th>
             <th>Amount</th>
@@ -22,8 +22,8 @@
         {{#each list}}
         <tr>
           <td>{{this.id}}</td>
-          <td>{{this.fullName}}</td>
-            <td>{{this.category}}</td>
+          <td>{{this.productName}}</td>
+            <td>{{this.productCategory}}</td>
             <td>{{this.amount}}</td>
             <td>
                 <a href="/product/{{this._id}}">

@@ -5,11 +5,11 @@ var productSchema = new mongoose.Schema({
         type: String,
         required: 'This field is required'
     },
-    fullName: {
+    productName: {
         type: String,
         required: 'This field is required'
     },
-    category: {
+    productCategory: {
         type: String,
         required: 'This field is required'
 

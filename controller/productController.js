@@ -21,8 +21,8 @@ router.post("/", (req, res) => {
 function insertRecord(req, res) {
     var product = new Product();
     product.id = req.body.id;
-    product.fullName = req.body.fullName;
-    product.category = req.body.category;
+    product.productName = req.body.productName;
+    product.productCategory = req.body.productCategory;
     product.amount = req.body.amount;
 
     product.save((err, doc) => {
@@ -98,11 +98,14 @@ router.get('/delete/:id', (req, res) => {
 function handleValidationError(err, body) {
     for (field in err.errors) {
         switch (err.errors[field].path) {
-            case 'fullName':
-                body['fullNameError'] = err.errors[field].message;
+            case 'id':
+                body['idError'] = err.errors[field].message;
                 break;
-                case 'category':
-                    body['categoryError'] = err.errors[field].message;
+            case 'productName':
+                body['productNameError'] = err.errors[field].message;
+                break;
+                case 'productCategory':
+                    body['productCategoryError'] = err.errors[field].message;
                     break;
                     case 'amount':
                 body['amountError'] = err.errors[field].message;
