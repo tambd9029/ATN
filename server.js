@@ -28,6 +28,9 @@ app.get('/', function (req, res) {
     res.render("home")
 })
 app.set('view engine', 'hbs');
-var port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 app.use('/product', productController);
